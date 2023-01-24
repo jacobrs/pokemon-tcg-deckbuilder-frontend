@@ -1,0 +1,34 @@
+.container {
+  background-color: #FFF;
+  padding:2rem;
+  margin: 2rem;
+}
+
+.deck-list-header {
+  padding: 2rem 2rem 0rem 2rem;
+}
+
+.loading-container {
+  text-align: center;
+  width: 100%;
+}
+
+.loading-icon{
+  animation-name: spin;
+  animation-duration: 2000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+  /* transform: rotate(3deg); */
+  /* transform: rotate(0.3rad);/ */
+  /* transform: rotate(3grad); */ 
+  /* transform: rotate(.03turn);  */
+}
+
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
+}
