@@ -6,7 +6,7 @@ import './styles/DeckList.css';
 import DeckTile from './DeckTile/DeckTile';
 import DeckHeader from './DeckHeader/DeckHeader';
 
-const DECK_LIST_QUERY = gql`
+export const DECK_LIST_QUERY = gql`
   query GetDeckList($type: PokemonType) {
     decks(type: $type) {
       nodes{

@@ -11,7 +11,7 @@ const testCard = {
   evolvesFrom: "Pikachu"
 }
 
-describe('Pokemon Card', () => {
+describe('<PokemonCard/>', () => {
   afterAll(() => {
     cleanup()
   })
@@ -32,7 +32,7 @@ describe('Pokemon Card', () => {
   it("should render the card rarity and price", () => {
     render(<PokemonCard card={testCard} />);
 
-    screen.getByText(/Uncommon.*\$19\.99 USD/i);
+    screen.getByText(/Uncommon.*\$19\.99 USD/);
   })
 
   it("should render the card evolution details", () => {
