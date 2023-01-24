@@ -19,3 +19,12 @@ This is a react client for a Pokemon TCG deck builder that uses the GraphQL API 
 `yarn test` can be used to run the tests
 
 ## Screenshots
+
+### Deck List
+<img src="https://github.com/jacobrs/pokemon-tcg-deckbuilder-frontend/blob/main/docs/deck_list.png"/>
+
+### Deck Generation
+<img src="https://github.com/jacobrs/pokemon-tcg-deckbuilder-frontend/blob/main/docs/deck_generation.png"/>
+
+### Deck Details
+<img src="https://github.com/jacobrs/pokemon-tcg-deckbuilder-frontend/blob/main/docs/deck_details.png"/>
