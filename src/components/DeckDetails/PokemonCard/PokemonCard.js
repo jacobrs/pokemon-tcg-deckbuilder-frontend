@@ -4,7 +4,7 @@ import {Card, Image} from "semantic-ui-react";
 function PokemonCard({card}) {
   return (
     <Card className="pokemon-card">
-      <Image src={card.imageUrl} wrapped ui={false} />
+      <Image src={card.imageUrl} wrapped ui={false} alt='card-image'/>
       <Card.Content>
         <Card.Header className="no-text-wrap">{card.name}</Card.Header>
         <Card.Meta className="no-text-wrap">
