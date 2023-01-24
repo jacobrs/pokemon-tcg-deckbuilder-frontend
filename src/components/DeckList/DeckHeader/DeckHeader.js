@@ -16,22 +16,28 @@ const options = [
   { key: 'wat', text: 'Water', value: 'WATER' },
 ]
 
-
 function DeckHeader(props) {
   const onTypeChange = (_, element) => {
-    console.log(element.value);
     props.typeHandler(element.value);
   }
 
   return (
     <div className="deck-list-header">
       <h2>List of all generated decks</h2>
-      <Form.Select
-            fluid
-            options={options}
-            onChange={onTypeChange}
-            placeholder='Filter by deck type...'
-          />
+      <Form>
+        <Form.Group>
+          <Form.Select
+                fluid
+                options={options}
+                onChange={onTypeChange}
+                placeholder='Filter by deck type...'
+                width={16}
+              />
+          <Form.Button primary width={2} onClick={() => {window.location = "/new"}}>
+            Generate new deck
+          </Form.Button>
+        </Form.Group>
+      </Form>
     </div>
   )
 }

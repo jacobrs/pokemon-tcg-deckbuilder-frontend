@@ -1,0 +1,9 @@
+.container {
+  background-color: #FFF;
+  padding:2rem;
+  margin: 2rem;
+}
+
+.deck-title-header {
+  padding: 2rem 2rem 0 2rem !important;
+}

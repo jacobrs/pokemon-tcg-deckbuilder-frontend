@@ -3,19 +3,16 @@ import { List, Loader, Header, Segment, Icon, Button, Message } from 'semantic-u
 import { useQuery, gql } from "@apollo/client";
 
 import './styles/DeckList.css';
-import DeckTile from '../DeckTile/DeckTile';
+import DeckTile from './DeckTile/DeckTile';
 import DeckHeader from './DeckHeader/DeckHeader';
 
 const DECK_LIST_QUERY = gql`
-  query GetDeckList($first: Int, $type: PokemonType) {
-    decks(first: $first, type: $type) {
+  query GetDeckList($type: PokemonType) {
+    decks(type: $type) {
       nodes{
         id
         name
         type
-        cards{
-          id
-        }
       }
     }
   }
@@ -26,7 +23,6 @@ function DeckList({client}) {
 
   const { data, loading, error } = useQuery(DECK_LIST_QUERY, {
     variables: {
-      first: 20,
       type: selectedType === "ANY" ? null : selectedType
     }
   });
@@ -65,7 +61,7 @@ function DeckList({client}) {
               <Icon name='clone outline' />
               No decks found for this type.
             </Header>
-            <Button primary>Generate a new deck</Button>
+            <Button primary href="/new">Generate a new deck</Button>
           </Segment>
         }
       </div>
